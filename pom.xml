@@ -86,7 +86,7 @@
 		<profile>
 			<id>external-javafx</id>
 			<activation>
-				<jdk>[11,)</jdk>
+				<jdk>[8,)</jdk>
 			</activation>
 			<dependencies>
 				<dependency>
