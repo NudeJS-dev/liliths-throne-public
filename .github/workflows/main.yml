@@ -24,7 +24,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '8'
-          distribution: 'temurin'
+          distribution: 'liberica'
 
       # 第三步：使用 Maven 编译和打包
       # 这会执行 pom.xml 中的打包指令，生成 jar 文件

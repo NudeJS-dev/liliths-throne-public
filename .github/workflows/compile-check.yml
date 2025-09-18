@@ -28,7 +28,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         java-version: '8'
-        distribution: 'temurin'
+        distribution: 'liberica'
         cache: maven
     - name: Compile with Maven
       run: mvn -B clean compile --file pom.xml -Dtarget.platform=linux-aarch64
@@ -44,7 +44,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         java-version: '8'
-        distribution: 'temurin'
+        distribution: 'liberica'
         cache: maven
     - name: Compile with Maven
       run: mvn -B clean compile --file pom.xml -Dtarget.platform=linux
@@ -60,7 +60,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         java-version: '8'
-        distribution: 'temurin'
+        distribution: 'liberica'
         cache: maven
     - name: Compile with Maven
       run: mvn -B clean compile --file pom.xml -Dtarget.platform=mac-aarch64
@@ -76,7 +76,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         java-version: '8'
-        distribution: 'temurin'
+        distribution: 'liberica'
         cache: maven
     - name: Compile with Maven
       run: mvn -B clean compile --file pom.xml -Dtarget.platform=mac
@@ -92,7 +92,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         java-version: '8'
-        distribution: 'temurin'
+        distribution: 'liberica'
         cache: maven
     - name: Compile with Maven
       run: mvn -B clean compile --file pom.xml -Dtarget.platform=win-x86
@@ -108,7 +108,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         java-version: '8'
-        distribution: 'temurin'
+        distribution: 'liberica'
         cache: maven
     - name: Compile with Maven
       run: mvn -B clean compile --file pom.xml -Dtarget.platform=win
