@@ -19,11 +19,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 第二步：设置 JDK 8u172
-      - name: Set up JDK 8u172
+      # 第二步：设置 JDK 8
+      - name: Set up JDK 8
         uses: actions/setup-java@v4
         with:
-          java-version: '8.0.172'
+          java-version: '8'
           distribution: 'temurin'
 
       # 第三步：使用 Maven 编译和打包
