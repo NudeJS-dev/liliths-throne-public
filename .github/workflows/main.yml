@@ -17,17 +17,22 @@ jobs:
     steps:
       # 第一步：签出代码
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # 第二步：设置 JDK 11
-      - name: Set up JDK 11
-        uses: actions/setup-java@v3
+      # 第二步：设置 JDK 8u172
+      # ========================================================= #
+      # |                  *** 这里是修改的部分 *** | #
+      # VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV #
+      - name: Set up JDK 8u172
+        uses: actions/setup-java@v4
         with:
-          java-version: '11'
-          distribution: 'temurin'
+          distribution: 'zulu'
+          java-version: '1.8.0_172' # '1.8.0_172' 精确对应 '8u172'
+      # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ #
+      # |                  *** 修改结束 *** | #
+      # ========================================================= #
 
       # 第三步：使用 Maven 编译和打包
-      # 这会执行 pom.xml 中的打包指令，生成 jar 文件
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
